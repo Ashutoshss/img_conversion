@@ -2,12 +2,17 @@
 This file contain program file for the task submission for the internship interview.
 
 ## Setup
-Before running the project, ensure you have sourced the necessary setup files in your terminal. You can add the following lines to your `~/.bashrc` file:
-
 ```bash
+mkdir -p ~/mowito_ws/src
+cd mowito_ws/src
+git clone https://github.com/Ashutoshss/img_conversion.git
+cd ..
+colcon build --symlink-install
+
+# Before running the project, ensure you have sourced the necessary setup files in your terminal. You can add the following lines to your `~/.bashrc` file:
 # Source ROS2 Humble setup
 source /opt/ros/humble/setup.bash
-source ~/ros2_ws/install/setup.bash
+source ~/mowito_ws/install/setup.bash
 
 # Source colcon_cd function
 source /usr/share/colcon_cd/function/colcon_cd.sh
