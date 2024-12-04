@@ -16,7 +16,7 @@ export _colcon_cd_root=/opt/ros/humble/
 
 ## To Launch the Srcipt 
 use 
-```
+```bash
 ros2 launch usb_cam_pkg image_conversion.launch.py 
 ```
 ## To Call the Service 
@@ -30,6 +30,6 @@ ros2 service call /change_mode std_srvs/srv/SetBool "{data: False}"
 ```
 
 ## For Viewing The Images use
-```
+```bash
 ros2 run rqt_image_view rqt_image_view
 ```
