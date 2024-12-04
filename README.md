@@ -41,5 +41,5 @@ ros2 run rqt_image_view rqt_image_view
 ```bash
 ros2 run usb_cam_pkg img_conversion_node
 ```
--This script subscribes to the topic /image_raw and publishes the converted images to a custom topic /image_converted.
--You can view the converted images on /image_converted, and any changes in the mode (BGR to grayscale or vice versa) will be reflected dynamically.
+- This script subscribes to the topic `/image_raw` and publishes the converted images to a custom topic `/image_converted`.
+- You can view the converted images on /image_converted, and any changes in the mode (BGR to grayscale or vice versa) will be reflected dynamically.
