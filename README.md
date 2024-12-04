@@ -34,11 +34,12 @@ ros2 service call /change_mode std_srvs/srv/SetBool "{data: False}"
 
 ## For Viewing The Images use
 ```bash
+# Select /image_converted
 ros2 run rqt_image_view rqt_image_view
 ```
 ## Additionally to acces the main program file 
 ```bash
 ros2 run usb_cam_pkg img_conversion_node
-# This Script subscribe the topic `/image_raw` and publish it a costum topic `/image_converted`
-u can view it and change are reflected over it.
 ```
+-This script subscribes to the topic /image_raw and publishes the converted images to a custom topic /image_converted.
+-You can view the converted images on /image_converted, and any changes in the mode (BGR to grayscale or vice versa) will be reflected dynamically.
