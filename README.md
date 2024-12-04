@@ -34,8 +34,7 @@ ros2 service call /change_mode std_srvs/srv/SetBool "{data: False}"
 
 ## For Viewing The Images use
 ```bash
-# Select /image_converted
-ros2 run rqt_image_view rqt_image_view
+ros2 run rqt_image_view rqt_image_view   # Select /image_converted
 ```
 ## Additionally to acces the main program file 
 ```bash
