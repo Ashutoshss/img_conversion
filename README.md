@@ -11,3 +11,10 @@ source ~/ros2_ws/install/setup.bash
 # Source colcon_cd function
 source /usr/share/colcon_cd/function/colcon_cd.sh
 export _colcon_cd_root=/opt/ros/humble/
+```
+
+## TO Launch the Srcipt 
+use 
+```
+ros2 launch usb_cam_pkg image_conversion.launch.py 
+```
