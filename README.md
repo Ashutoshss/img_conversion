@@ -1,31 +1,29 @@
 # img_conversion
-This file contain program file for the task submission for the internship interview.
+This repository contains the program for the Image Conversion Task,for getting a call for internship interview.
 
 ## Setup
 ```bash
 mkdir -p ~/mowito_ws/src
 cd mowito_ws/src
 git clone https://github.com/Ashutoshss/img_conversion.git
-cd ..
-colcon build --symlink-install
 
-# Before running the project, ensure you have sourced the necessary setup files in your terminal. You can add the following lines to your `~/.bashrc` file:
+# Before running the project, ensure the necessary setup files are sourced. Add the following line to your ~/.bashrc file to automatically source the workspace on every terminal launch:
 # Source ROS2 Humble setup
-source /opt/ros/humble/setup.bash
 source ~/mowito_ws/install/setup.bash
 
-# Source colcon_cd function
-source /usr/share/colcon_cd/function/colcon_cd.sh
-export _colcon_cd_root=/opt/ros/humble/
+cd ..
+colcon build --symlink-install
+Source ~/.bashrc
+
 ```
 
 ## To Launch the Srcipt 
-use 
+To launch the package, use the following command:
 ```bash
 ros2 launch usb_cam_pkg image_conversion.launch.py 
 ```
 ## To Call the Service 
-use 
+The package includes a service to toggle between BGR (colored image) and grayscale modes.
 ```bash
 #for changing the image from bgr(colored image) to grayscale image
 ros2 service call /change_mode std_srvs/srv/SetBool "{data: True}"
@@ -37,4 +35,10 @@ ros2 service call /change_mode std_srvs/srv/SetBool "{data: False}"
 ## For Viewing The Images use
 ```bash
 ros2 run rqt_image_view rqt_image_view
+```
+## Additionally to acces the main program file 
+```bash
+ros2 run usb_cam_pkg img_conversion_node
+# This Script subscribe the topic `/image_raw` and publish it a costum topic `/image_converted`
+u can view it and change are reflected over it.
 ```
